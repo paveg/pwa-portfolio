@@ -80,7 +80,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: "pav/portfolio"
+      title: "~/.pav.pf"
     }
   }
 }
