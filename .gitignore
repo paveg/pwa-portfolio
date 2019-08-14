@@ -92,3 +92,6 @@ sw.*
 
 # for direnv
 .envrc
+
+# for firebase
+.firebase/
