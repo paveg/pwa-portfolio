@@ -16,9 +16,6 @@ jobs:
       - name: Setup yarn.
         run: |
           curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.17.3
-      - name: Prepare firebase
-        run: |
-          yarn global add firebase firebase-tools
       - name: Install dependencies
         run: |
           yarn install
@@ -27,4 +24,4 @@ jobs:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
           FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
         run: |
-          yarn run build && firebase deploy --project "$FIREBASE_PJ" --token "$FIREBASE_TOKEN"
+          yarn run build && ./node_modules/.bin/firebase deploy --project "$FIREBASE_PJ" --token "$FIREBASE_TOKEN"

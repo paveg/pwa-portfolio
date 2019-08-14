@@ -54,7 +54,7 @@ export default {
     return {
       clipped: false,
       drawer: true,
-      fixed: false,
+      fixed: true,
       items: [
         {
           icon: "mdi-home",
@@ -77,7 +77,7 @@ export default {
           to: "/contact"
         }
       ],
-      miniVariant: false,
+      miniVariant: true,
       right: true,
       rightDrawer: false,
       title: "~/.pav.pf"
