@@ -2,7 +2,8 @@
   "name": "pwa-portfolio",
   "version": "1.0.0",
   "description": "My PWA Portfolio",
-  "author": "pav&lt;pavegy@gmail.com&gt;",
+  "author": "pav<pavegy@gmail.com>",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.ts --watch server",
