@@ -25,6 +25,11 @@ module.exports = {
     "@nuxtjs/axios",
     "@nuxtjs/pwa"
   ],
+  manifest: {
+    name: "pav portfolio",
+    short_name: "pav pf",
+    lang: "ja"
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
@@ -52,8 +57,8 @@ module.exports = {
     }
   },
   build: {
-    /*
-     ** You can extend webpack config here
-     */
+    typescript: {
+      typeCheck: true
+    }
   }
 }

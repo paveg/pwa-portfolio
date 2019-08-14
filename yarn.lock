@@ -1114,7 +1114,7 @@
     serve-static "^1.14.1"
     server-destroy "^1.0.1"
 
-"@nuxt/typescript@2.8.1", "@nuxt/typescript@^2.8.1":
+"@nuxt/typescript@^2.8.1":
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/@nuxt/typescript/-/typescript-2.8.1.tgz#7f6b51ebdf9b270862fafeb51c77b54e6ef1d7c3"
   integrity sha512-K6WBhs2EtQfND4ty2lDs7W6iAUECedLUCdLCwnB0Jiy9TvdnSOyirZmeymsZKRkMURzVrCjokX4teSRTTCq9SA==
@@ -1278,7 +1278,7 @@
   resolved "https://registry.yarnpkg.com/@nuxtjs/pwa-utils/-/pwa-utils-3.0.0-beta.16.tgz#808ddb090f3831c5b32931ab2d08231cc55abff9"
   integrity sha512-3sF8iAstLi/dbQ39S4Zdy/QsK5IArgJ2s/nuGxOTVuxz01m07VdMbJejzsdYbyz31mQP0w4IPFNYOCPZhcvVig==
 
-"@nuxtjs/pwa@^3.0.0-0":
+"@nuxtjs/pwa@^3.0.0-beta.16":
   version "3.0.0-beta.16"
   resolved "https://registry.yarnpkg.com/@nuxtjs/pwa/-/pwa-3.0.0-beta.16.tgz#be140b5c6c8fade76e95ed9ccda8d5585074642d"
   integrity sha512-K/+XJDYTeC/7e5p3RRT7fxa+wqDPjjbRTboLHy43FGLWzVbpvqx8JFeaFguMbrkjUknP3z4Tio6L3mG57OZlmg==
@@ -5978,7 +5978,7 @@ node-releases@^1.1.25:
   dependencies:
     semver "^5.3.0"
 
-nodemon@^1.18.9:
+nodemon@^1.19.1:
   version "1.19.1"
   resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-1.19.1.tgz#576f0aad0f863aabf8c48517f6192ff987cd5071"
   integrity sha512-/DXLzd/GhiaDXXbGId5BzxP1GlsqtMGM9zTmkWrgXtSqjKmGSbLicM/oAy4FR0YWm14jCHRwnR31AHS2dYFHrg==
@@ -6098,21 +6098,7 @@ nuxt-property-decorator@^2.3.0:
     vuex "^3.1.1"
     vuex-class "^0.3.2"
 
-nuxt-ts@^2.8.1:
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/nuxt-ts/-/nuxt-ts-2.8.1.tgz#ed996a86051073982fcc85a144baa61b64878a14"
-  integrity sha512-SA5lnB910pY7/MzY91AUYTy5SMHT9hhD/BBCHPXP6NASEjHtFhyHCsVx8O7LRW/6CIMXxO2BeNhpK9c5qIyh4g==
-  dependencies:
-    "@nuxt/builder" "2.8.1"
-    "@nuxt/cli" "2.8.1"
-    "@nuxt/core" "2.8.1"
-    "@nuxt/generator" "2.8.1"
-    "@nuxt/loading-screen" "^0.5.2"
-    "@nuxt/opencollective" "^0.2.2"
-    "@nuxt/typescript" "2.8.1"
-    "@nuxt/webpack" "2.8.1"
-
-nuxt@^2.0.0:
+nuxt@^2.8.1:
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-2.8.1.tgz#10a307e51973fa7b55abfeb41b84c76cbdd6f2f6"
   integrity sha512-y0XsKvusxmtWVsBB4kt+yA7+KoALPnUvkfLBxSy2kV2S1AudGNYAJK0IdUAP4xKd0QJSc9IzSDVat8UZi4FEQA==
