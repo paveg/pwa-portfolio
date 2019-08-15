@@ -21,7 +21,8 @@
     "express": "^4.16.4",
     "lint": "^0.7.0",
     "nuxt": "^2.8.1",
-    "nuxt-property-decorator": "^2.3.0"
+    "nuxt-property-decorator": "^2.3.0",
+    "vue-json-pretty": "^1.6.0"
   },
   "devDependencies": {
     "@nuxt/typescript": "^2.8.1",

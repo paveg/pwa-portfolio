@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>
-      about page
+      about
     </h1>
     <h2>
       work in progress

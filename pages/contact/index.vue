@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>
-      contact page
+      contact
     </h1>
   </div>
 </template>
