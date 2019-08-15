@@ -17,7 +17,7 @@
 <script lang="ts">
 import Vue from "vue"
 //@ts-ignore
-import * as VueJsonPretty from "vue-json-pretty"
+import VueJsonPretty from "vue-json-pretty"
 
 export default Vue.extend({
   components: {
