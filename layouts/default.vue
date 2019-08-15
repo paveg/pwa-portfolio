@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app light>
     <v-app-bar :clipped-left="clipped" fixed app>
       <v-btn icon @click.stop="miniVariant = !miniVariant">
         <v-icon>mdi-chevron-left</v-icon>

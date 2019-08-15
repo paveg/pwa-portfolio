@@ -55,14 +55,14 @@ export default Vue.extend({
 })
 </script>
 
-<style>
+<style lang="scss">
 .flex {
   display: flex;
 }
 
 .code-space {
   width: 70vw;
-  background-color: black;
+  color: black;
 }
 
 .codes {
@@ -82,12 +82,29 @@ export default Vue.extend({
 
   .code-space {
     width: 100%;
-    background-color: black;
     font-size: smaller;
   }
 
   .career {
     width: 100%;
   }
+}
+
+@media screen and (max-width: 420px) {
+  .code-space .vjs-tree {
+    font-size: small;
+  }
+}
+
+.v-application code {
+  color: black;
+}
+
+.vjs-tree .vjs-value__string {
+  color: orangered;
+}
+
+.vjs-tree .vjs-comment {
+  color: darkblue;
 }
 </style>
