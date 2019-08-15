@@ -5,7 +5,7 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: '@typescript-eslint/parser'
+    parsers: ['@typescript-eslint/parser', 'vue', 'vue-eslint-parser']
   },
   extends: [
     "eslint:recommended",
@@ -27,6 +27,6 @@ module.exports = {
         "void": "always",
       }
     }],
-    "prettier/prettier": ["error", { "semi": false }]
+    "prettier/prettier": ["error", {"semi": false}],
   }
 }

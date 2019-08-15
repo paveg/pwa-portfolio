@@ -18,9 +18,7 @@
     <v-navigation-drawer
       v-model="rightDrawer"
       :mini-variant="miniVariant"
-      :clipped="clipped"
       :right="right"
-      fixed
       app
     >
       <v-list>
@@ -43,18 +41,20 @@
       </v-list>
     </v-navigation-drawer>
     <v-footer :fixed="fixed" app>
-      <span>&copy; 2019</span>
+      <span>&copy; 2019 Ryota Ikezawa</span>
     </v-footer>
   </v-app>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from "vue"
+
+export default Vue.extend({
   data() {
     return {
-      clipped: false,
       drawer: true,
       fixed: true,
+      clipped: true,
       items: [
         {
           icon: "mdi-home",
@@ -83,5 +83,5 @@ export default {
       title: "~/.pav.pf"
     }
   }
-}
+})
 </script>
