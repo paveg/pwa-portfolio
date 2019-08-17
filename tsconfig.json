@@ -10,11 +10,11 @@
     ],
     "esModuleInterop": true,
     "experimentalDecorators": true,
+    "resolveJsonModule": true,
     "allowJs": true,
     "sourceMap": true,
     "strict": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
+    "noImplicitAny": false,
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
@@ -28,9 +28,7 @@
     "types": [
       "@types/node",
       "@nuxt/vue-app",
-      "vuetify",
-      "vue-json-pretty"
+      "vuetify"
     ]
   }
 }
-
