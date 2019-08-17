@@ -40,14 +40,15 @@
   </v-navigation-drawer>
 </template>
 
-<script>
+<script lang="ts">
 import Vue from "vue";
 import { mapState, mapMutations } from "vuex";
 
 export default Vue.extend({
   name: "CommonDrawer",
   data: () => ({
-    logo: "./icon.png",
+    logo: require("@/assets/image/icon.png"),
+    responsive: false,
     linkItems: [
       {
         icon: "mdi-home",
