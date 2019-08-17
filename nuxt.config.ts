@@ -1,5 +1,3 @@
-const colors = require("vuetify/es5/util/colors").default
-
 module.exports = {
   mode: "spa",
   head: {
@@ -18,7 +16,7 @@ module.exports = {
   },
   loading: { color: "#fff" },
   css: [],
-  plugins: [],
+  plugins: [{}],
   devModules: ["@nuxtjs/vuetify"],
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
@@ -42,7 +40,7 @@ module.exports = {
   vuetify: {
     customVariables: ["~/assets/variables.scss"],
     theme: {
-      light: true,
+      light: true
     }
   },
   build: {
@@ -50,4 +48,4 @@ module.exports = {
       typeCheck: true
     }
   }
-}
+};

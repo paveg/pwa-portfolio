@@ -5,7 +5,7 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parsers: ['@typescript-eslint/parser', 'vue', 'vue-eslint-parser']
+    parsers: ["@typescript-eslint/parser", "vue", "vue-eslint-parser"]
   },
   extends: [
     "eslint:recommended",
@@ -13,20 +13,19 @@ module.exports = {
     "plugin:prettier/recommended",
     "plugin:nuxt/recommended"
   ],
-  plugins: [
-    'vue',
-    'prettier',
-    '@typescript-eslint'
-  ],
+  plugins: ["vue", "prettier", "@typescript-eslint"],
   rules: {
-    "semi": [2, "never"],
+    semi: [0, "never"],
     "no-console": "off",
     "vue/max-attributes-per-line": "off",
-    "vue/html-self-closing": ["error", {
-      "html": {
-        "void": "always",
+    "vue/html-self-closing": [
+      "error",
+      {
+        html: {
+          void: "always"
+        }
       }
-    }],
-    "prettier/prettier": ["error", {"semi": false}],
+    ],
+    "prettier/prettier": ["error", { semi: true }]
   }
-}
+};
