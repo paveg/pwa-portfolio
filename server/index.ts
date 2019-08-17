@@ -7,7 +7,7 @@ const app = express();
 const config = require("../nuxt.config.ts");
 config.dev = process.env.NODE_ENV !== "production";
 
-async function start(): Promise<any> {
+async function start() {
   // Init Nuxt.js
   const nuxt = new Nuxt(config);
 
