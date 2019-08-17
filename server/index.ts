@@ -32,4 +32,4 @@ async function start() {
   });
 }
 
-start().catch(err => console.log(err));
+start();

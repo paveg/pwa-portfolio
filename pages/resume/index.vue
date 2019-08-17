@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>
-      profile
+      resume
     </h1>
     <h2>
       work in progress

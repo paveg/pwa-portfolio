@@ -4,28 +4,22 @@ module.exports = {
     browser: true,
     node: true
   },
+  parser: "vue-eslint-parser",
   parserOptions: {
-    parsers: ["@typescript-eslint/parser", "vue", "vue-eslint-parser"]
+    parser: "@typescript-eslint/parser"
   },
   extends: [
-    "eslint:recommended",
-    "plugin:vue/recommended",
-    "plugin:prettier/recommended",
-    "plugin:nuxt/recommended"
+    "@nuxtjs",
+    "plugin:nuxt/recommended",
+    "prettier",
+    "prettier/vue",
+    "prettier/@typescript-eslint"
   ],
-  plugins: ["vue", "prettier", "@typescript-eslint"],
+  plugins: ["prettier", "@typescript-eslint"],
+  // add your custom rules here
   rules: {
-    semi: [0, "never"],
-    "no-console": "off",
-    "vue/max-attributes-per-line": "off",
-    "vue/html-self-closing": [
-      "error",
-      {
-        html: {
-          void: "always"
-        }
-      }
-    ],
-    "prettier/prettier": ["error", { semi: true }]
+    "prettier/prettier": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error"
   }
 };
