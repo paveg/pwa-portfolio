@@ -1,3 +1,5 @@
+const colors = require("vuetify/es5/util/colors").default;
+
 module.exports = {
   mode: "spa",
   head: {
@@ -15,10 +17,19 @@ module.exports = {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
   loading: { color: "#fff" },
-  css: [],
-  plugins: [{}],
+  css: [{ src: "@/styles/index.scss", lang: "scss" }],
+  plugins: [],
   devModules: ["@nuxtjs/vuetify"],
   modules: [
+    [
+      "nuxt-sass-resources-loader",
+      [
+        "@/styles/index.scss",
+        "@/styles/partials/_mixins.scss",
+        "@/styles/partials/_colors.scss",
+        "@/styles/partials/_sidebar.scss"
+      ]
+    ],
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
     "@nuxtjs/pwa"

@@ -7,7 +7,7 @@ const app = express();
 const config = require("../nuxt.config.ts");
 config.dev = process.env.NODE_ENV !== "production";
 
-async function start() {
+async function start(): Promise<any> {
   // Init Nuxt.js
   const nuxt = new Nuxt(config);
 
@@ -31,4 +31,5 @@ async function start() {
     badge: true
   });
 }
-start();
+
+start().catch(err => console.log(err));
