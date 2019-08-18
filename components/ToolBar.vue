@@ -20,6 +20,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { mapMutations } from "vuex";
+
 export default Vue.extend({
   data: () => ({
     title: null,
@@ -29,7 +30,7 @@ export default Vue.extend({
   }),
   watch: {
     $route(val) {
-      this.title = val.name;
+      this.title = val.name === "index" ? "home" : val.name;
     }
   },
   mounted() {

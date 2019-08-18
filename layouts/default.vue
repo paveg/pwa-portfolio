@@ -11,8 +11,8 @@
 <script lang="ts">
 import Vue from "vue";
 import Vuetify from "vuetify";
-import CommonDrawer from "@/components/CommonDrawer.vue";
-import ToolBar from "@/components/ToolBar.vue";
+import CommonDrawer from "@/components/CommonDrawer";
+import ToolBar from "@/components/ToolBar";
 
 Vue.use(Vuetify);
 
