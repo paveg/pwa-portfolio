@@ -1,0 +1,7 @@
+#!/bin/bash
+
+res=$(yarn lint 2>/dev/null)
+if echo "${res}" | grep -qE "ERROR"; then
+  echo "Please, check your code syntax."
+fi
+

@@ -2,6 +2,13 @@
 
 > My PWA Portfolio
 
+# pre-commit
+
+```bash
+$ cd path/to/pwa-portfolio
+$ ln -sf "$PWD/tools/pre-commit" "$PWD/.git/hooks/pre-commit"
+```
+
 ## Build Setup
 
 ``` bash
