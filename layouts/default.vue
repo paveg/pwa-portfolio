@@ -1,5 +1,6 @@
 <template>
   <v-app light>
+    <tool-bar />
     <common-drawer />
     <v-footer app>
       <span>&copy; 2019 {{ author }}</span>
@@ -11,11 +12,13 @@
 import Vue from "vue";
 import Vuetify from "vuetify";
 import CommonDrawer from "@/components/CommonDrawer.vue";
+import ToolBar from "@/components/ToolBar.vue";
 
 Vue.use(Vuetify);
 
 export default Vue.extend({
   components: {
+    ToolBar,
     CommonDrawer
   },
   data() {

@@ -88,11 +88,7 @@ export default Vue.extend({
   methods: {
     ...mapMutations("app", ["setDrawer", "toggleDrawer"]),
     onResponsiveInverted() {
-      if (window.innerWidth < 991) {
-        this.responsive = true;
-      } else {
-        this.responsive = false;
-      }
+      this.responsive = window.innerWidth < 991;
     }
   }
 });
