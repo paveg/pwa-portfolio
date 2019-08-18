@@ -28,7 +28,7 @@
         >
           <v-icon>mdi-minus</v-icon>
         </v-btn>
-        {{ counter }}
+        {{ $store.state.counter }}
       </v-toolbar-title>
     </div>
   </v-toolbar>
@@ -36,16 +36,16 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { mapMutations } from "vuex";
+import { mapState, mapMutations } from "vuex";
 
 export default Vue.extend({
   data: () => ({
-    counter: 0,
     title: null,
     drawer: false,
     responsive: false,
     responsiveInput: false
   }),
+  computed: {},
   watch: {
     $route(val) {
       this.title = val.name === "index" ? "home" : val.name;
@@ -59,15 +59,22 @@ export default Vue.extend({
     window.removeEventListener("resize", this.onResponsiveInverted);
   },
   methods: {
-    ...mapMutations(["setDrawer", "toggleDrawer"]),
+    ...mapState(["counter"]),
+    ...mapMutations([
+      "plusCounter",
+      "minusCounter",
+      "setDrawer",
+      "toggleDrawer"
+    ]),
     onClickBtn() {
-      console.log("[info][wip] clicked button");
+      this.$store.commit("setDrawer");
     },
     onClickPlus() {
-      this.counter++;
+      this.$store.commit("plusCounter");
+      console.log(this.$store.state.counter);
     },
     onClickMinux() {
-      this.counter--;
+      this.$store.commit("minusCounter");
     },
     onResponsiveInverted() {
       this.responsive = window.innerWidth < 1264;
