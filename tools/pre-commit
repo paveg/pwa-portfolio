@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 res=$(yarn lint 2>/dev/null)
 if echo "${res}" | grep -qE "ERROR"; then
