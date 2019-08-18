@@ -4,10 +4,10 @@
       <v-toolbar-title class="tertiary--text font-weight-light">
         <v-btn
           v-if="responsive"
+          @click.stop="onClickBtn"
           class="default v-btn--simple"
           light
           icon
-          @click.stop="onClickBtn"
         >
           <v-icon>mdi-view-list</v-icon>
         </v-btn>
