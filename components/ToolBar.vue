@@ -12,10 +12,20 @@
         >
           <v-icon>mdi-view-list</v-icon>
         </v-btn>
-        <v-btn @click.stop="onClickPlus" class="default v-btn--simple" light icon>
+        <v-btn
+          @click.stop="onClickPlus"
+          class="default v-btn--simple"
+          light
+          icon
+        >
           <v-icon>mdi-plus</v-icon>
         </v-btn>
-        <v-btn @click.stop="onClickMinux" class="default v-btn--simple" light icon>
+        <v-btn
+          @click.stop="onClickMinux"
+          class="default v-btn--simple"
+          light
+          icon
+        >
           <v-icon>mdi-minus</v-icon>
         </v-btn>
         {{ counter }}
