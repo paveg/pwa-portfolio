@@ -2,6 +2,7 @@
   <v-toolbar id="toolbar" flat prominent style="background: white;">
     <div class="v-toolbar-title float-left">
       <v-toolbar-title class="tertiary--text font-weight-light">
+        {{ title }}
         <v-btn
           v-if="responsive"
           @click.stop="onClickBtn"
@@ -11,7 +12,13 @@
         >
           <v-icon>mdi-view-list</v-icon>
         </v-btn>
-        {{ title }}
+        <v-btn @click.stop="onClickPlus" class="default v-btn--simple" light icon>
+          <v-icon>mdi-plus</v-icon>
+        </v-btn>
+        <v-btn @click.stop="onClickMinux" class="default v-btn--simple" light icon>
+          <v-icon>mdi-minus</v-icon>
+        </v-btn>
+        {{ counter }}
       </v-toolbar-title>
     </div>
   </v-toolbar>
@@ -23,6 +30,7 @@ import { mapMutations } from "vuex";
 
 export default Vue.extend({
   data: () => ({
+    counter: 0,
     title: null,
     drawer: false,
     responsive: false,
@@ -44,6 +52,12 @@ export default Vue.extend({
     ...mapMutations(["setDrawer", "toggleDrawer"]),
     onClickBtn() {
       console.log("[info][wip] clicked button");
+    },
+    onClickPlus() {
+      this.counter++;
+    },
+    onClickMinux() {
+      this.counter--;
     },
     onResponsiveInverted() {
       this.responsive = window.innerWidth < 1264;
