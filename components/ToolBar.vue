@@ -42,9 +42,8 @@ export default Vue.extend({
   methods: {
     ...mapMutations(["setDrawer", "toggleDrawer"]),
     onClickBtn() {
-      this.setDrawer(!this.$store.state.app.drawer);
+      console.log("[info][wip] clicked button");
     },
-    onClick() {},
     onResponsiveInverted() {
       this.responsive = window.innerWidth < 1264;
     }

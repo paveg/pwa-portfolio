@@ -86,7 +86,7 @@ export default Vue.extend({
     window.removeEventListener("resize", this.onResponsiveInverted);
   },
   methods: {
-    ...mapMutations("app", ["setDrawer", "toggleDrawer"]),
+    ...mapMutations(["setDrawer", "toggleDrawer"]),
     onResponsiveInverted() {
       this.responsive = window.innerWidth < 991;
     }
