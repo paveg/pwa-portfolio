@@ -1,15 +1,44 @@
 <template>
   <v-card :style="styles" exact light raised>
-    <v-card class="v-card--material__header"></v-card>
-    <v-card-title v-text="textTitle" />
-    <p v-text="text" class="text-area" />
+    <helper-offset
+      v-if="hasOffset"
+      :inline="inline"
+      :full-width="fullWidth"
+      :offset="offset"
+    >
+      <v-card
+        v-if="!$slots.offset"
+        :color="color"
+        :class="`elevation-${elevation}`"
+        class="v-card--material__header"
+        light
+      >
+        <template v-slot:header v-if="!title && !text" />
+        <span v-else>
+          <h4 v-text="title" class="title font-weight-light mb-2" />
+          <p v-text="text" class="category font-weigth-thin" />
+        </span>
+      </v-card>
+      <v-slot v-else name="offset" />
+    </helper-offset>
+    <v-card-text>
+      <slot />
+    </v-card-text>
+    <v-divider v-if="$slots.actions" class="mx-3" />
+    <v-card-actions v-if="$slots.actions">
+      <slot name="actions" />
+    </v-card-actions>
   </v-card>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import HelperOffset from "@/components/helper/Offset.vue";
 export default Vue.extend({
   name: "MaterialCard",
+  components: {
+    HelperOffset
+  },
   props: {
     color: {
       type: String,
@@ -45,6 +74,11 @@ export default Vue.extend({
     }
   },
   computed: {
+    hasOffset() {
+      return (
+        this.$slots.header || this.$slots.offset || this.title || this.text
+      );
+    },
     styles() {
       const top = Number(this.offset) * 2;
       const bottom = this.offset;
@@ -59,17 +93,11 @@ export default Vue.extend({
 </script>
 
 <style scoped lang="scss">
-.theme--light.v-card {
-  margin-right: 15px;
-}
 .v-card--material {
   &__header {
     &.v-card {
       border-radius: 4px;
     }
   }
-}
-.text-area {
-  padding: 5px;
 }
 </style>

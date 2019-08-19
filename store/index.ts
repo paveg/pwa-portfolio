@@ -3,14 +3,15 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
-const set: any = (property: string) => (
+export const set: any = (property: string) => (
   state: { [x: string]: any },
   payload: any
 ) => (state[property] = payload);
-const toggle: any = (property: string) => (state: { [x: string]: any }) =>
-  (state[property] = !state[property]);
+export const toggle: any = (property: string) => (state: {
+  [x: string]: any;
+}) => (state[property] = !state[property]);
 
-const index = () => {
+const store = () => {
   return new Vuex.Store({
     state: {
       setDrawer: null,
@@ -22,20 +23,20 @@ const index = () => {
       sidebarBackgroundColor: "rgba(27, 27, 27, 0.74)"
     },
     mutations: {
-      setDrawer(state, val) {
-        state.setDrawer = val;
+      setDrawer() {
+        set("drawer");
       },
       toggleDrawer() {
         toggle("drawer");
       },
-      setImage(state, img) {
-        set(img);
+      setImage(image) {
+        set(image);
       },
-      setColor(state, color) {
+      setColor(color) {
         set(color);
       }
     }
   });
 };
 
-export default index;
+export default store;

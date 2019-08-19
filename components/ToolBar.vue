@@ -44,10 +44,10 @@ export default Vue.extend({
   methods: {
     ...mapMutations(["setDrawer", "toggleDrawer"]),
     onClickBtn() {
-      this.$store.commit("setDrawer");
+      this.$store.commit("toggleDrawer");
     },
     onResponsiveInverted() {
-      this.responsive = window.innerWidth < 1264;
+      this.responsive = window.innerWidth < 991;
     }
   }
 });
