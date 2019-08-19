@@ -27,3 +27,8 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+## Notes
+
+Respected: https://github.com/creativetimofficial/vuetify-material-dashboard
+
