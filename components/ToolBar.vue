@@ -1,6 +1,6 @@
 <template>
   <v-toolbar id="toolbar" flat prominent style="background: white;">
-    <div class="v-toolbar-title float-left">
+    <div class="v-toolbar-title">
       <v-toolbar-title class="tertiary--text font-weight-light">
         <v-btn
           v-if="responsive"
@@ -11,6 +11,7 @@
         >
           <v-icon>mdi-view-list</v-icon>
         </v-btn>
+        {{ title }}
       </v-toolbar-title>
     </div>
   </v-toolbar>
@@ -55,8 +56,5 @@ export default Vue.extend({
 <style lang="scss">
 #toolbar a {
   text-decoration: none;
-}
-.v-toolbar-title {
-  margin-left: auto;
 }
 </style>

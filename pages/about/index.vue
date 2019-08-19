@@ -1,16 +1,18 @@
 <template>
-  <div>
-    <h1>
-      about
-    </h1>
-    <h2>
-      work in progress
-    </h2>
-  </div>
+  <MaterialCard :text="text" />
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-
-export default Vue.extend({});
+import MaterialCard from "@/components/MaterialCard.vue";
+export default Vue.extend({
+  components: {
+    MaterialCard
+  },
+  data() {
+    return {
+      text: "about"
+    };
+  }
+});
 </script>

@@ -32,3 +32,9 @@ export default Vue.extend({
   }
 });
 </script>
+
+<style lang="scss">
+.theme--light.v-footer {
+  background-color: white;
+}
+</style>

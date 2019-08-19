@@ -13,12 +13,11 @@ const toggle: any = (property: string) => (state: { [x: string]: any }) =>
 const index = () => {
   return new Vuex.Store({
     state: {
-      counter: 0,
       setDrawer: null,
       drawer: false,
       color: "success",
       image:
-        "https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-2.32103624.jpg",
+        "https://www.pakutaso.com/shared/img/thumb/edgawa-hanabi-27_TP_V4.jpg",
       sidebarOverlayGradient: "",
       sidebarBackgroundColor: "rgba(27, 27, 27, 0.74)"
     },
