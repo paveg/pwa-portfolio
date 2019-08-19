@@ -76,6 +76,7 @@ export default Vue.extend({
   computed: {
     hasOffset() {
       return (
+        // @ts-ignore
         this.$slots.header || this.$slots.offset || this.title || this.text
       );
     },
