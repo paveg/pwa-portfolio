@@ -1,7 +1,8 @@
 <template>
-  <v-card exact light raised>
+  <v-card :style="styles" exact light raised>
     <v-card class="v-card--material__header"></v-card>
-    <p v-text="text" />
+    <v-card-title v-text="textTitle" />
+    <p v-text="text" class="text-area" />
   </v-card>
 </template>
 
@@ -18,6 +19,10 @@ export default Vue.extend({
       type: [Number, String],
       default: 10
     },
+    inline: {
+      type: Boolean,
+      default: false
+    },
     fullWidth: {
       type: Boolean,
       default: false
@@ -33,6 +38,21 @@ export default Vue.extend({
     text: {
       type: String,
       default: undefined
+    },
+    textTitle: {
+      type: String,
+      default: undefined
+    }
+  },
+  computed: {
+    styles() {
+      const top = Number(this.offset) * 2;
+      const bottom = this.offset;
+
+      return {
+        marginTop: `${top}px`,
+        marginBottom: `${bottom}px`
+      };
     }
   }
 });
@@ -48,5 +68,8 @@ export default Vue.extend({
       border-radius: 4px;
     }
   }
+}
+.text-area {
+  padding: 5px;
 }
 </style>

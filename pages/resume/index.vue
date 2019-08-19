@@ -1,5 +1,5 @@
 <template>
-  <MaterialCard :text="text" />
+  <MaterialCard :textTitle="textTitle" :text="text" />
 </template>
 
 <script lang="ts">
@@ -11,7 +11,8 @@ export default Vue.extend({
   },
   data() {
     return {
-      text: "resume"
+      textTitle: "resume",
+      text: "work in progress"
     };
   }
 });
