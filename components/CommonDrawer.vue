@@ -15,7 +15,7 @@
             <v-img :src="logo" width="40" height="40" />
           </v-list>
           <v-list tile title class="title">
-            PAVLOG
+            Ryota Ikezawa
           </v-list>
         </v-list>
         <br />

@@ -2,6 +2,7 @@
   <v-app light>
     <tool-bar />
     <common-drawer />
+    <core-view />
     <v-footer app>
       <span>&copy; 2019 {{ author }}</span>
     </v-footer>
@@ -13,13 +14,15 @@ import Vue from "vue";
 import Vuetify from "vuetify";
 import CommonDrawer from "@/components/CommonDrawer.vue";
 import ToolBar from "@/components/ToolBar.vue";
+import CoreView from "~/components/CoreView.vue";
 
 Vue.use(Vuetify);
 
 export default Vue.extend({
   components: {
     ToolBar,
-    CommonDrawer
+    CommonDrawer,
+    CoreView
   },
   data() {
     return {

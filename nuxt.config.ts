@@ -25,7 +25,10 @@ module.exports = {
         "@/styles/index.scss",
         "@/styles/partials/_mixins.scss",
         "@/styles/partials/_colors.scss",
-        "@/styles/partials/_sidebar.scss"
+        "@/styles/partials/_sidebar.scss",
+        "@/styles/partials/_toolbar.scss",
+        "@/styles/partials/_dropdown.scss",
+        "@/styles/partials/_fixed-content.scss"
       ]
     ],
     // Doc: https://axios.nuxtjs.org/usage

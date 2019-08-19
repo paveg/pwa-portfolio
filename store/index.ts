@@ -17,22 +17,23 @@ const index = () => {
       setDrawer: null,
       drawer: false,
       color: "success",
+      image:
+        "https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-2.32103624.jpg",
       sidebarOverlayGradient: "",
       sidebarBackgroundColor: "rgba(27, 27, 27, 0.74)"
     },
     mutations: {
-      plusCounter(state) {
-        state.counter++;
-      },
-      minusCounter(state) {
-        state.counter--;
-      },
-      setDrawer(state) {
-        state.drawer = !state.drawer;
-        set("drawer");
+      setDrawer(state, val) {
+        state.setDrawer = val;
       },
       toggleDrawer() {
         toggle("drawer");
+      },
+      setImage(state, img) {
+        set(img);
+      },
+      setColor(state, color) {
+        set(color);
       }
     }
   });
