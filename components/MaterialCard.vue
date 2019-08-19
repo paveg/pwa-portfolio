@@ -21,7 +21,9 @@
       </v-card>
       <v-slot v-else name="offset" />
     </helper-offset>
+    <v-card-title v-text="title"></v-card-title>
     <v-card-text>
+      <p v-text="text" />
       <slot />
     </v-card-text>
     <v-divider v-if="$slots.actions" class="mx-3" />
@@ -65,10 +67,6 @@ export default Vue.extend({
       default: undefined
     },
     text: {
-      type: String,
-      default: undefined
-    },
-    textTitle: {
       type: String,
       default: undefined
     }
