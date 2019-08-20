@@ -48,7 +48,7 @@ export default Vue.extend({
       this.$store.commit("toggleDrawer");
     },
     onResponsiveInverted() {
-      this.responsive = window.innerWidth < 991;
+      this.responsive = window.innerWidth < 1265;
       this.responsiveInput = window.innerWidth > 991;
     }
   }
@@ -58,5 +58,8 @@ export default Vue.extend({
 <style lang="scss">
 #core-toolbar a {
   text-decoration: none;
+}
+.theme--light.v-sheet {
+  max-height: max-content;
 }
 </style>
