@@ -25,7 +25,6 @@
     <v-card-text>
       <p v-text="text" />
       <v-slot />
-      {{ this.$store.state }}
     </v-card-text>
     <v-divider v-if="$slots.actions" class="mx-3" />
     <v-card-actions v-if="$slots.actions">
