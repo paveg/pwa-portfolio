@@ -12,7 +12,7 @@ export default Vue.extend({
   data() {
     return {
       title: "home",
-      text: "work in progress"
+      text: "text"
     };
   }
 });

@@ -1,42 +1,28 @@
 import Vue from "vue";
-import Vuex from "vuex";
+import Vuex, { StoreOptions } from "vuex";
+import { RootState } from "~/types";
+import mutations from "~/store/mutations";
+import getters from "~/store/getters";
+import actions from "~/store/actions";
 
 Vue.use(Vuex);
 
-export const set: any = (property: string) => (
-  state: { [x: string]: any },
-  payload: any
-) => (state[property] = payload);
-export const toggle: any = (property: string) => (state: {
-  [x: string]: any;
-}) => (state[property] = !state[property]);
+const state = () => ({
+  setDrawer: null,
+  toggle: false,
+  drawer: false,
+  color: "success",
+  image: "https://www.pakutaso.com/shared/img/thumb/edgawa-hanabi-27_TP_V4.jpg",
+  sidebarOverlayGradient: "",
+  sidebarBackgroundColor: "rgba(27, 27, 27, 0.74)"
+});
 
-const store = () => {
-  return new Vuex.Store({
-    state: {
-      setDrawer: null,
-      drawer: false,
-      color: "success",
-      image:
-        "https://www.pakutaso.com/shared/img/thumb/edgawa-hanabi-27_TP_V4.jpg",
-      sidebarOverlayGradient: "",
-      sidebarBackgroundColor: "rgba(27, 27, 27, 0.74)"
-    },
-    mutations: {
-      setDrawer() {
-        set("drawer");
-      },
-      toggleDrawer() {
-        toggle("drawer");
-      },
-      setImage(image) {
-        set(image);
-      },
-      setColor(color) {
-        set(color);
-      }
-    }
-  });
+const store: StoreOptions<RootState> = {
+  state,
+  mutations,
+  getters,
+  actions,
+  modules: {}
 };
 
-export default store;
+export default () => new Vuex.Store<RootState>(store);

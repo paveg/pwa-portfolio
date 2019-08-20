@@ -1,6 +1,7 @@
 <template>
   <v-navigation-drawer
     id="app-drawer"
+    v-model="inputValue"
     app
     dark
     floating
@@ -10,15 +11,14 @@
   >
     <v-img :src="image" :gradient="sidebarOverlayGradient" height="100%">
       <v-layout class="full-height" tag="v-list" column>
-        <v-list tile avatar class="drawer-top">
-          <v-list tile avatar color="white">
-            <v-img :src="logo" width="40" height="40" />
-          </v-list>
-          <v-list tile title class="title">
+        <v-list tile avatar class="flex-list">
+          <v-list-item-avatar tile avatar color="white">
+            <v-img :src="logo" height="34" width="34" />
+          </v-list-item-avatar>
+          <v-list-item-title class="title">
             Ryota Ikezawa
-          </v-list>
+          </v-list-item-title>
         </v-list>
-        <br />
         <v-divider />
         <v-list-item
           v-for="(item, i) in linkItems"
@@ -30,9 +30,9 @@
           tile
           class="v-list-item"
         >
-          <v-list action>
+          <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
-          </v-list>
+          </v-list-item-action>
           <v-list v-text="item.text" title />
         </v-list-item>
       </v-layout>
@@ -74,6 +74,14 @@ export default Vue.extend({
   }),
   computed: {
     ...mapState(["image", "color"]),
+    inputValue: {
+      get() {
+        return this.$store.state.drawer;
+      },
+      set(val) {
+        this.$store.commit("setDrawer", val);
+      }
+    },
     sidebarOverlayGradient() {
       return `${this.$store.state.sidebarBackgroundColor}, ${this.$store.state.sidebarBackgroundColor}`;
     }
@@ -103,17 +111,11 @@ export default Vue.extend({
       margin-bottom: 17px;
     }
   }
-  .drawer-top {
+  .flex-list {
     display: flex;
-    text-align: center;
-    margin-top: 15px;
-    font-size: 1.8rem;
-    margin-left: 30px;
-    .title {
-      margin-left: 12px;
-      font-family: "Menlo for Powerline";
-      margin-top: 6px;
-    }
+  }
+  .v-avatar.v-list-item__avatar.v-avatar--tile.white {
+    margin-left: 24px;
   }
   .v-image__image--contain {
     top: 9px;

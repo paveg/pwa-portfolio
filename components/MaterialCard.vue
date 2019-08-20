@@ -24,11 +24,12 @@
     <v-card-title v-text="title"></v-card-title>
     <v-card-text>
       <p v-text="text" />
-      <slot />
+      <v-slot />
+      {{ this.$store.state }}
     </v-card-text>
     <v-divider v-if="$slots.actions" class="mx-3" />
     <v-card-actions v-if="$slots.actions">
-      <slot name="actions" />
+      <v-slot name="actions" />
     </v-card-actions>
   </v-card>
 </template>
