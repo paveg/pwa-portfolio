@@ -1,6 +1,6 @@
 <template>
   <div :style="styles" :class="classes" class="v-offset">
-    <v-slot />
+    <slot />
   </div>
 </template>
 

@@ -12,7 +12,7 @@ export default Vue.extend({
   data() {
     return {
       title: "home",
-      text: "text"
+      text: "Welcome to my portfolio!"
     };
   }
 });

@@ -16,6 +16,6 @@ export default Vue.extend({});
 <style lang="scss">
 #core-view {
   padding-bottom: 100px;
-  padding-left: 15px;
+  padding: 0 15px;
 }
 </style>

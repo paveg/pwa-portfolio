@@ -19,16 +19,16 @@
           <p v-text="text" class="category font-weigth-thin" />
         </span>
       </v-card>
-      <v-slot v-else name="offset" />
+      <template v-slot v-else name="offset" />
     </helper-offset>
     <v-card-title v-text="title"></v-card-title>
     <v-card-text>
       <p v-text="text" />
-      <v-slot />
+      <template v-slot />
     </v-card-text>
     <v-divider v-if="$slots.actions" class="mx-3" />
     <v-card-actions v-if="$slots.actions">
-      <v-slot name="actions" />
+      <template v-slot name="actions" />
     </v-card-actions>
   </v-card>
 </template>

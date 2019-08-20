@@ -4,9 +4,6 @@
     <tool-bar />
     <common-drawer />
     <core-view />
-    <v-footer app>
-      <span>&copy; 2019 {{ author }}</span>
-    </v-footer>
   </v-app>
 </template>
 
