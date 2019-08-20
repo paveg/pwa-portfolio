@@ -7,7 +7,7 @@
 <script lang="ts">
 import Vue from "vue";
 export default Vue.extend({
-  name: "Offset",
+  name: "HelperOffset",
   props: {
     fullWidth: {
       type: Boolean,

@@ -1,28 +1,31 @@
 <template>
   <v-app>
-    <view-filter />
-    <tool-bar />
+    <core-filter />
+    <core-toolbar />
     <common-drawer />
     <core-view />
+    <core-footer />
   </v-app>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import Vuetify from "vuetify";
-import ViewFilter from "@/components/ViewFilter.vue";
+import CoreFilter from "@/components/CoreFilter.vue";
 import CommonDrawer from "@/components/CommonDrawer.vue";
-import ToolBar from "@/components/ToolBar.vue";
+import CoreToolbar from "@/components/CoreToolbar.vue";
 import CoreView from "@/components/CoreView.vue";
+import CoreFooter from "@/components/CoreFooter.vue";
 
 Vue.use(Vuetify);
 
 export default Vue.extend({
   components: {
-    ViewFilter,
-    ToolBar,
+    CoreFilter,
+    CoreToolbar,
     CommonDrawer,
-    CoreView
+    CoreView,
+    CoreFooter
   },
   data() {
     return {

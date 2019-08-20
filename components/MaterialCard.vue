@@ -1,5 +1,5 @@
 <template>
-  <v-card :style="styles" exact light raised>
+  <v-card v-bind="$attrs" :style="styles" v-on="$listeners" light raised>
     <helper-offset
       v-if="hasOffset"
       :inline="inline"

@@ -10,12 +10,14 @@
 
 <script lang="ts">
 import Vue from "vue";
-export default Vue.extend({});
+export default Vue.extend({
+  name: "CoreView"
+});
 </script>
 
 <style lang="scss">
 #core-view {
-  padding-bottom: 100px;
+  margin-bottom: 500px;
   padding: 0 15px;
 }
 </style>

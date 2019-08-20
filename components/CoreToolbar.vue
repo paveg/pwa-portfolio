@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar id="toolbar" flat prominent style="background: white;">
+  <v-toolbar id="core-toolbar" flat prominent style="background: #eee;">
     <div class="v-toolbar-title">
       <v-toolbar-title class="tertiary--text font-weight-light">
         <v-btn
@@ -22,6 +22,7 @@ import Vue from "vue";
 import { mapMutations } from "vuex";
 
 export default Vue.extend({
+  name: "CoreToolbar",
   data: () => ({
     title: null,
     drawer: false,
@@ -55,7 +56,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-#toolbar a {
+#core-toolbar a {
   text-decoration: none;
 }
 </style>

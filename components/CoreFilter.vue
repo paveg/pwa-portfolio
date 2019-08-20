@@ -80,7 +80,7 @@
           </v-flex>
           <v-flex xs12>
             <div class="text-xs-center body-2 text-uppercase">
-              <div class=" sidebar-filter">
+              <div class="sidebar-filter">
                 Thank You for Sharing!
               </div>
 
@@ -112,6 +112,7 @@ import Vue from "vue";
 import { mapState, mapMutations } from "vuex";
 
 export default Vue.extend({
+  name: "CoreFilter",
   data: () => ({
     colors: ["primary", "info", "success", "warning", "danger"],
     images: []
