@@ -9,20 +9,6 @@
     offset-x
     transition="slide-y-transition"
   >
-    <template v-slot:activator="{ on }">
-      <v-btn
-        :v-on="on"
-        class="elevation-0"
-        color="grey"
-        light
-        fab
-        fixed
-        style="top: 96px;"
-        top
-      >
-        <v-icon>mdi-settings</v-icon>
-      </v-btn>
-    </template>
     <v-card>
       <v-container grid-list-xl>
         <v-layout wrap>
