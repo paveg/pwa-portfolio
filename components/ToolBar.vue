@@ -48,6 +48,7 @@ export default Vue.extend({
     },
     onResponsiveInverted() {
       this.responsive = window.innerWidth < 991;
+      this.responsiveInput = window.innerWidth > 991;
     }
   }
 });
