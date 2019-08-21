@@ -12,7 +12,26 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore .",
-    "deploy": "yarn run build && firebase deploy"
+    "deploy": "yarn run build && firebase deploy",
+    "test": "jest"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue",
+      "ts",
+      "tsx"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+    },
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/jest-serializer-vue"
+    ],
+    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$",
+    "collectCoverage": true
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.6.0",
@@ -29,9 +48,12 @@
     "@nuxt/typescript": "^2.8.1",
     "@nuxtjs/eslint-config": "^1.1.2",
     "@nuxtjs/vuetify": "^1.0.0",
+    "@types/jest": "^24.0.18",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
+    "@vue/test-utils": "^1.0.0-beta.29",
     "babel-eslint": "^10.0.2",
+    "babel-jest": "^24.9.0",
     "eslint": "^6.1.0",
     "eslint-config-prettier": "^6.1.0",
     "eslint-config-typescript": "^3.0.0",
@@ -41,13 +63,18 @@
     "eslint-plugin-typescript": "^0.14.0",
     "eslint-plugin-vue": "^5.2.3",
     "firebase-tools": "^7.2.4",
+    "jest": "^24.9.0",
+    "jest-serializer-vue": "^2.0.2",
     "node-sass": "^4.12.0",
     "nodemon": "^1.19.1",
     "nuxt-sass-resources-loader": "^2.0.5",
     "prettier": "^1.18.2",
     "sass-loader": "^7.3.1",
+    "ts-jest": "^24.0.2",
     "ts-node": "^8.3.0",
     "typescript-eslint-parser": "^22.0.0",
-    "vue-eslint-parser": "^6.0.4"
+    "vue-eslint-parser": "^6.0.4",
+    "vue-jest": "^3.0.4",
+    "vue-test-utils": "^1.0.0-beta.11"
   }
 }
