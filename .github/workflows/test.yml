@@ -1,0 +1,25 @@
+name: Jest
+on: [push]
+jobs:
+  build:
+    name: Jest on node ${{ matrix.node_version }} and ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node_version: [12]
+        os: [ubuntu-18.04, ubuntu-latest]
+    steps:
+      - uses: actions/checkout@master
+      - name: Use Node.js ${{ matrix.node_version }}
+        uses: actions/setup-node@v1
+        with:
+          version: ${{ matrix.node_version }}
+      - name: Setup yarn.
+        run: |
+          curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.17.3
+      - name: yarn install
+        run: |
+          yarn install
+      - name: run test
+        run: |
+          yarn test
