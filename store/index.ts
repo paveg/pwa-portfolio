@@ -9,6 +9,7 @@ Vue.use(Vuex);
 
 const state = () => ({
   setDrawer: null,
+  drawer: window.outerWidth > 991,
   toggle: false,
   color: "success",
   image: "https://www.pakutaso.com/shared/img/thumb/edgawa-hanabi-27_TP_V4.jpg",

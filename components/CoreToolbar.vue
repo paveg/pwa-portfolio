@@ -25,7 +25,6 @@ export default Vue.extend({
   name: "CoreToolbar",
   data: () => ({
     title: "home",
-    drawer: false,
     responsive: false,
     responsiveInput: false
   }),
