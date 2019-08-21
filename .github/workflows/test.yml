@@ -2,7 +2,7 @@ name: Jest
 on: [push]
 jobs:
   build:
-    name: Lint on node ${{ matrix.node_version }} and ${{ matrix.os }}
+    name: Jest on node ${{ matrix.node_version }} and ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
