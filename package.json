@@ -13,7 +13,7 @@
     "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore .",
     "deploy": "yarn run build && firebase deploy",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "jest": {
     "moduleFileExtensions": [
