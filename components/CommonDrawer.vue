@@ -37,6 +37,11 @@
           </v-list-item-action>
           <v-list v-text="item.text" title />
         </v-list-item>
+        <v-divider light />
+        <v-chip class="ma-4" color="info" label>
+          <v-icon left>mdi-progress-wrench</v-icon>
+          work in progress
+        </v-chip>
       </v-layout>
     </v-img>
   </v-navigation-drawer>
@@ -115,10 +120,11 @@ export default Vue.extend({
   }
   .flex-list {
     display: flex;
+    margin-top: 10px;
     margin-bottom: 10px;
   }
   .v-avatar.v-list-item__avatar.v-avatar--tile.white {
-    margin-left: 18px;
+    margin-left: 20px;
   }
   .v-image__image--contain {
     top: 9px;
