@@ -10,7 +10,6 @@ Vue.use(Vuex);
 const state = () => ({
   setDrawer: null,
   toggle: false,
-  drawer: false,
   color: "success",
   image: "https://www.pakutaso.com/shared/img/thumb/edgawa-hanabi-27_TP_V4.jpg",
   sidebarOverlayGradient: "",

@@ -24,7 +24,7 @@ import { mapMutations } from "vuex";
 export default Vue.extend({
   name: "CoreToolbar",
   data: () => ({
-    title: null,
+    title: "home",
     drawer: false,
     responsive: false,
     responsiveInput: false
@@ -48,7 +48,7 @@ export default Vue.extend({
       this.$store.commit("toggleDrawer");
     },
     onResponsiveInverted() {
-      this.responsive = window.innerWidth < 1265;
+      this.responsive = window.innerWidth < 1270;
       this.responsiveInput = window.innerWidth > 991;
     }
   }

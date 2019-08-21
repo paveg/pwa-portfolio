@@ -13,15 +13,15 @@
       <v-layout class="full-height" tag="v-list" column>
         <v-list tile avatar class="flex-list">
           <v-list-item-avatar tile avatar color="white">
-            <v-avatar>
+            <v-avatar tile class="avatar">
               <img :src="logo" alt="avatar" />
             </v-avatar>
           </v-list-item-avatar>
           <v-list-item-title class="title">
-            Ryota Ikezawa
+            pavlog
           </v-list-item-title>
         </v-list>
-        <v-divider />
+        <v-divider light />
         <v-list-item
           v-for="(item, i) in linkItems"
           :key="i"
@@ -44,7 +44,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { mapState, mapMutations } from "vuex";
+import { mapMutations } from "vuex";
 
 export default Vue.extend({
   name: "CommonDrawer",
@@ -76,7 +76,6 @@ export default Vue.extend({
     ]
   }),
   computed: {
-    ...mapState(["image", "color"]),
     inputValue: {
       get() {
         return this.$store.state.drawer;
@@ -116,9 +115,10 @@ export default Vue.extend({
   }
   .flex-list {
     display: flex;
+    margin-bottom: 10px;
   }
   .v-avatar.v-list-item__avatar.v-avatar--tile.white {
-    margin-left: 24px;
+    margin-left: 18px;
   }
   .v-image__image--contain {
     top: 9px;
@@ -126,6 +126,9 @@ export default Vue.extend({
   }
   div.v-responsive.v-image > div.v-responsive__content {
     overflow-y: auto;
+  }
+  .v-avatar {
+    border-radius: 50%;
   }
 }
 </style>

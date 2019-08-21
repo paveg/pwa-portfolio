@@ -1,6 +1,5 @@
 <template>
   <v-app>
-    <core-filter />
     <core-toolbar />
     <common-drawer />
     <core-view />
@@ -11,7 +10,6 @@
 <script lang="ts">
 import Vue from "vue";
 import Vuetify from "vuetify";
-import CoreFilter from "@/components/CoreFilter.vue";
 import CommonDrawer from "@/components/CommonDrawer.vue";
 import CoreToolbar from "@/components/CoreToolbar.vue";
 import CoreView from "@/components/CoreView.vue";
@@ -21,7 +19,6 @@ Vue.use(Vuetify);
 
 export default Vue.extend({
   components: {
-    CoreFilter,
     CoreToolbar,
     CommonDrawer,
     CoreView,
