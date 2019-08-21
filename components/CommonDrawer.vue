@@ -13,7 +13,9 @@
       <v-layout class="full-height" tag="v-list" column>
         <v-list tile avatar class="flex-list">
           <v-list-item-avatar tile avatar color="white">
-            <v-img :src="logo" height="34" width="34" />
+            <v-avatar>
+              <img :src="logo" alt="avatar" />
+            </v-avatar>
           </v-list-item-avatar>
           <v-list-item-title class="title">
             Ryota Ikezawa
@@ -47,7 +49,8 @@ import { mapState, mapMutations } from "vuex";
 export default Vue.extend({
   name: "CommonDrawer",
   data: () => ({
-    logo: require("@/assets/image/icon.png"),
+    logo:
+      "https://raw.githubusercontent.com/paveg/pwa-portfolio/master/assets/image/icon_circle.png",
     responsive: false,
     linkItems: [
       {
