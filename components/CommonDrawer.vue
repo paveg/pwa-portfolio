@@ -38,7 +38,7 @@
           <v-list v-text="item.text" title />
         </v-list-item>
         <v-divider light />
-        <v-chip class="ma-4" color="info" label>
+        <v-chip class="ma-4" color="info" style="width: 87%" label>
           <v-icon left>mdi-progress-wrench</v-icon>
           work in progress
         </v-chip>
