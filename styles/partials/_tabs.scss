@@ -18,7 +18,7 @@
 
   .v-tabs__slider-wrapper .white {
     background-color: $tabs-active-line !important;
-    border-color: $tabs-active-line !important
+    border-color: $tabs-active-line !important;
   }
 
   .v-tabs__slider {
@@ -34,7 +34,8 @@
     height: auto;
   }
 
-  .v-list .v-input, .v-list .v-input__slot {
+  .v-list .v-input,
+  .v-list .v-input__slot {
     justify-content: center;
   }
 }
