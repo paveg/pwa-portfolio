@@ -20,6 +20,12 @@ module.exports = {
   devModules: ["@nuxtjs/vuetify"],
   modules: [
     ["nuxt-sass-resources-loader", ["@/styles/index.scss"]],
+    [
+      "@nuxtjs/google-analytics",
+      {
+        id: "UA-132779419-2"
+      }
+    ],
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
     "@nuxtjs/pwa"
@@ -48,5 +54,9 @@ module.exports = {
     typescript: {
       typeCheck: true
     }
+  },
+  debug: {
+    enabled: true,
+    sendHitTask: true
   }
 };

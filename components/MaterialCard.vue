@@ -91,7 +91,7 @@ export default Vue.extend({
 });
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .v-card--material {
   &__header {
     &.v-card {
