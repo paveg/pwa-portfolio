@@ -19,13 +19,12 @@ export default Vue.extend({
     }
   },
   computed: {
-    classes(): object {
+    classes() {
       return {
         "v-offset--full-width": this.fullWidth
       };
     },
-    styles(): any {
-      // @ts-ignore
+    styles() {
       if (!this.hasOffset) return null;
 
       return {
