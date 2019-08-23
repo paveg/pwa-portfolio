@@ -77,6 +77,11 @@ export default Vue.extend({
         icon: "mdi-email",
         text: "Contact",
         to: "/contact"
+      },
+      {
+        icon: "mdi-security",
+        text: "Privacy Policy",
+        to: "/privacy_policy"
       }
     ]
   }),
