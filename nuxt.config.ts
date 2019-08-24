@@ -1,15 +1,11 @@
 module.exports = {
   mode: "spa",
   head: {
-    titleTemplate: "%s | " + "pav",
+    titleTemplate: "%s - " + process.env.npm_package_name,
     title: process.env.npm_package_name || "",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      {
-        name: "format-detection",
-        content: "telephone=no, email=no, address=no"
-      },
       {
         hid: "description",
         name: "description",
@@ -21,7 +17,7 @@ module.exports = {
   loading: { color: "#fff" },
   css: [{ src: "@/styles/index.scss", lang: "scss" }],
   plugins: [],
-  buildModules: ["@nuxtjs/vuetify"],
+  devModules: ["@nuxtjs/vuetify"],
   modules: [
     ["nuxt-sass-resources-loader", ["@/styles/index.scss"]],
     [
