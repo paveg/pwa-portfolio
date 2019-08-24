@@ -17,22 +17,20 @@ module.exports = {
   loading: { color: "#fff" },
   css: [{ src: "@/styles/index.scss", lang: "scss" }],
   plugins: [],
-  buildModules: [
-    "@nuxtjs/vuetify",
+  buildModules: ["@nuxtjs/vuetify"],
+  modules: [
+    ["vue-loader", "nuxt-sass-resources-loader", ["@/styles/index.scss"]],
+    [
+      "@nuxtjs/google-analytics",
+      {
+        id: "UA-132779419-2"
+      }
+    ],
     [
       "@nuxt/typescript-build",
       {
         typeCheck: true,
         ignoreNotFoundWaringns: true
-      }
-    ]
-  ],
-  modules: [
-    ["nuxt-sass-resources-loader", ["@/styles/index.scss"]],
-    [
-      "@nuxtjs/google-analytics",
-      {
-        id: "UA-132779419-2"
       }
     ],
     // Doc: https://axios.nuxtjs.org/usage
