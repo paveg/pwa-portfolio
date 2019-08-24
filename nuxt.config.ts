@@ -19,7 +19,7 @@ module.exports = {
   plugins: [],
   buildModules: ["@nuxtjs/vuetify", "@nuxt/typescript-build"],
   modules: [
-    ["vue-loader", "nuxt-sass-resources-loader", ["@/styles/index.scss"]],
+    ["nuxt-sass-resources-loader", "@/styles/index.scss"],
     [
       "@nuxtjs/google-analytics",
       {
@@ -30,7 +30,7 @@ module.exports = {
       "@nuxt/typescript-build",
       {
         typeCheck: true,
-        ignoreNotFoundWaringns: true
+        ignoreNotFoundWarnings: true
       }
     ],
     // Doc: https://axios.nuxtjs.org/usage
