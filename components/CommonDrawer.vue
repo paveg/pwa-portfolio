@@ -18,7 +18,7 @@
             </v-avatar>
           </v-list-item-avatar>
           <v-list-item-title class="title">
-            pav
+            pavlog
           </v-list-item-title>
         </v-list>
         <v-divider light />
@@ -26,6 +26,7 @@
           v-for="(item, i) in linkItems"
           :key="i"
           :to="item.to"
+          :active-class="color"
           router
           exact
           tile
