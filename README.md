@@ -1,6 +1,6 @@
 # pwa-portfolio
 
-> My Progressive Web App; Portfolio
+*Progressive Web App, My Portfolio*
 
 ## Technical Stack
 
