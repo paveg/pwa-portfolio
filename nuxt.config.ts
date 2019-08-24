@@ -17,7 +17,16 @@ module.exports = {
   loading: { color: "#fff" },
   css: [{ src: "@/styles/index.scss", lang: "scss" }],
   plugins: [],
-  devModules: ["@nuxtjs/vuetify"],
+  buildModules: [
+    "@nuxtjs/vuetify",
+    [
+      "@nuxt/typescript-build",
+      {
+        typeCheck: true,
+        ignoreNotFoundWaringns: true
+      }
+    ]
+  ],
   modules: [
     ["nuxt-sass-resources-loader", ["@/styles/index.scss"]],
     [
@@ -50,11 +59,7 @@ module.exports = {
       light: true
     }
   },
-  build: {
-    typescript: {
-      typeCheck: true
-    }
-  },
+  build: {},
   debug: {
     enabled: true,
     sendHitTask: true
