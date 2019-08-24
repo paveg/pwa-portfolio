@@ -17,7 +17,7 @@ module.exports = {
   loading: { color: "#fff" },
   css: [{ src: "@/styles/index.scss", lang: "scss" }],
   plugins: [],
-  buildModules: ["@nuxtjs/vuetify"],
+  devModules: ["@nuxtjs/vuetify"],
   modules: [
     ["nuxt-sass-resources-loader", ["@/styles/index.scss"]],
     [
