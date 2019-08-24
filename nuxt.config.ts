@@ -1,7 +1,7 @@
 module.exports = {
   mode: "spa",
   head: {
-    titleTemplate: "%s - " + process.env.npm_package_name,
+    titleTemplate: "%s - " + "pav",
     title: process.env.npm_package_name || "",
     meta: [
       { charset: "utf-8" },
