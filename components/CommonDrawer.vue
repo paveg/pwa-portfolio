@@ -26,7 +26,6 @@
           v-for="(item, i) in linkItems"
           :key="i"
           :to="item.to"
-          :active-class="color"
           router
           exact
           tile
