@@ -26,7 +26,6 @@
           v-for="(item, i) in linkItems"
           :key="i"
           :to="item.to"
-          :active-class="color"
           router
           exact
           tile
@@ -56,6 +55,8 @@ export default Vue.extend({
   data: () => ({
     logo:
       "https://raw.githubusercontent.com/paveg/pwa-portfolio/master/assets/image/icon_circle.png",
+    image:
+      "https://www.pakutaso.com/shared/img/thumb/edgawa-hanabi-27_TP_V4.jpg",
     responsive: false,
     linkItems: [
       {
