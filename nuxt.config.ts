@@ -17,13 +17,20 @@ module.exports = {
   loading: { color: "#fff" },
   css: [{ src: "@/styles/index.scss", lang: "scss" }],
   plugins: [],
-  devModules: ["@nuxtjs/vuetify"],
+  buildModules: ["@nuxtjs/vuetify", "@nuxt/typescript-build"],
   modules: [
-    ["nuxt-sass-resources-loader", ["@/styles/index.scss"]],
+    ["nuxt-sass-resources-loader", "@/styles/index.scss"],
     [
       "@nuxtjs/google-analytics",
       {
         id: "UA-132779419-2"
+      }
+    ],
+    [
+      "@nuxt/typescript-build",
+      {
+        typeCheck: true,
+        ignoreNotFoundWarnings: true
       }
     ],
     // Doc: https://axios.nuxtjs.org/usage
@@ -50,11 +57,7 @@ module.exports = {
       light: true
     }
   },
-  build: {
-    typescript: {
-      typeCheck: true
-    }
-  },
+  build: {},
   debug: {
     enabled: true,
     sendHitTask: true

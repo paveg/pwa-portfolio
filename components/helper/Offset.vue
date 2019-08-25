@@ -19,7 +19,7 @@ export default Vue.extend({
     }
   },
   computed: {
-    classes(): object {
+    classes(): any {
       return {
         "v-offset--full-width": this.fullWidth
       };
