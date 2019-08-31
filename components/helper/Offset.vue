@@ -5,36 +5,29 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-export default Vue.extend({
-  name: "HelperOffset",
-  props: {
-    fullWidth: {
-      type: Boolean,
-      default: false
-    },
-    offset: {
-      type: [Number, String],
-      default: 0
-    }
-  },
-  computed: {
-    classes(): any {
-      return {
-        "v-offset--full-width": this.fullWidth
-      };
-    },
-    styles(): any {
-      // @ts-ignore
-      if (!this.hasOffset) return null;
+import { Component, Vue } from "vue-property-decorator";
 
-      return {
-        top: `-${this.offset}px`,
-        marginBottom: `-${this.offset}px`
-      };
-    }
+@Component
+export default class HelperOffset extends Vue {
+  name: string = "HelperOffset";
+  fullWidth: boolean = false;
+  offset: number | string = 0;
+  public get classes(): object {
+    return {
+      "v-offset--full-width": this.fullWidth
+    };
   }
-});
+
+  public get styles(): object | null {
+    // @ts-ignore
+    if (!this.hasOffset) return null;
+
+    return {
+      top: `-${this.offset}px`,
+      marginBottom: `-${this.offset}px`
+    };
+  }
+}
 </script>
 
 <style lang="scss">

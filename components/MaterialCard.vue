@@ -34,61 +34,37 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import { Component, Vue } from "vue-property-decorator";
 import HelperOffset from "@/components/helper/Offset.vue";
-export default Vue.extend({
-  name: "MaterialCard",
+
+@Component({
   components: {
     HelperOffset
-  },
-  props: {
-    color: {
-      type: String,
-      default: "secondary"
-    },
-    elevation: {
-      type: [Number, String],
-      default: 10
-    },
-    inline: {
-      type: Boolean,
-      default: false
-    },
-    fullWidth: {
-      type: Boolean,
-      default: false
-    },
-    offset: {
-      type: [Number, String],
-      default: 24
-    },
-    title: {
-      type: String,
-      default: undefined
-    },
-    text: {
-      type: String,
-      default: undefined
-    }
-  },
-  computed: {
-    hasOffset() {
-      return (
-        // @ts-ignore
-        this.$slots.header || this.$slots.offset || this.title || this.text
-      );
-    },
-    styles() {
-      const top = Number(this.offset) * 2;
-      const bottom = this.offset;
-
-      return {
-        marginTop: `${top}px`,
-        marginBottom: `${bottom}px`
-      };
-    }
   }
-});
+})
+export default class MaterialCard extends Vue {
+  name: string = "MaterialCard";
+  color: string = "secondary";
+  elevation: number | string = 10;
+  inline: boolean = false;
+  fullWidth: boolean = false;
+  offset: number | string = 24;
+  title: string | undefined = undefined;
+  text: string | undefined = undefined;
+
+  public get hasOffset(): any {
+    return this.$slots.header || this.$slots.offset || this.title || this.text;
+  }
+  public get styles(): object {
+    const top = Number(this.offset) * 2;
+    const bottom = this.offset;
+
+    return {
+      marginTop: `${top}px`,
+      marginBottom: `${bottom}px`
+    };
+  }
+}
 </script>
 
 <style lang="scss">

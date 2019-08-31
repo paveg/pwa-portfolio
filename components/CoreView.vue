@@ -9,10 +9,12 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-export default Vue.extend({
-  name: "CoreView"
-});
+import { Component, Vue } from "vue-property-decorator";
+
+@Component({})
+export default class CoreView extends Vue {
+  name: string = "CoreView";
+}
 </script>
 
 <style lang="scss">

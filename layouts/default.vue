@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import { Component, Vue } from "vue-property-decorator";
 import Vuetify from "vuetify";
 import CommonDrawer from "@/components/CommonDrawer.vue";
 import CoreToolbar from "@/components/CoreToolbar.vue";
@@ -17,20 +17,18 @@ import CoreFooter from "@/components/CoreFooter.vue";
 
 Vue.use(Vuetify);
 
-export default Vue.extend({
+@Component({
   components: {
     CoreToolbar,
     CommonDrawer,
     CoreView,
     CoreFooter
-  },
-  data() {
-    return {
-      title: "~/.pav.pf",
-      author: "Ryota Ikezawa"
-    };
   }
-});
+})
+export default class extends Vue {
+  title: string = "~/.pav.pf";
+  author: string = "Ryota Ikezawa";
+}
 </script>
 
 <style lang="scss">
