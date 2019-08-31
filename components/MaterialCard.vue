@@ -51,7 +51,6 @@ export default class MaterialCard extends Vue {
   offset: number | string = 24;
   title: string | undefined = undefined;
   text: string | undefined = undefined;
-
   public get hasOffset(): any {
     return this.$slots.header || this.$slots.offset || this.title || this.text;
   }
