@@ -22,6 +22,6 @@ jobs:
       - name: Deploy!
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-          FIREBASE_PJ: ${{ secrets.IREBASE_PJ }}
+          FIREBASE_PJ: ${{ secrets.FIREBASE_PJ }}
         run: |
           yarn run build && ./node_modules/.bin/firebase deploy --project "$FIREBASE_PJ" --token "$FIREBASE_TOKEN"
