@@ -3,17 +3,16 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import { Component, Vue } from "vue-property-decorator";
 import MaterialCard from "@/components/MaterialCard.vue";
-export default Vue.extend({
+
+@Component({
   components: {
     MaterialCard
-  },
-  data() {
-    return {
-      title: "home",
-      text: "Welcome to my portfolio!"
-    };
   }
-});
+})
+export default class extends Vue {
+  title: string = "home";
+  text: string = "Welcome to my portfolio!";
+}
 </script>

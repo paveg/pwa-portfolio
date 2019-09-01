@@ -34,7 +34,7 @@
           <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
-          <v-list v-text="item.text" title />
+          <v-list v-text="item.name" title />
         </v-list-item>
         <v-divider light />
         <v-chip class="ma-4" color="info" style="width: 87%" label>
@@ -47,72 +47,65 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { mapMutations } from "vuex";
+import { Component, Vue } from "vue-property-decorator";
+import { LinkInterface } from "~/types";
+// TODO: Add mapMutations
 
-export default Vue.extend({
-  name: "CommonDrawer",
-  data: () => ({
-    logo:
-      "https://raw.githubusercontent.com/paveg/pwa-portfolio/master/assets/image/icon_circle.png",
-    image:
-      "https://www.pakutaso.com/shared/img/thumb/edgawa-hanabi-27_TP_V4.jpg",
-    responsive: false,
-    linkItems: [
-      {
-        icon: "mdi-home",
-        text: "Home",
-        to: "/"
-      },
-      {
-        icon: "mdi-account",
-        text: "About",
-        to: "/about"
-      },
-      {
-        icon: "mdi-note",
-        text: "Resume",
-        to: "/resume"
-      },
-      {
-        icon: "mdi-email",
-        text: "Contact",
-        to: "/contact"
-      },
-      {
-        icon: "mdi-security",
-        text: "Privacy Policy",
-        to: "/privacy_policy"
-      }
-    ]
-  }),
-  computed: {
-    inputValue: {
-      get() {
-        return this.$store.state.drawer;
-      },
-      set(val) {
-        this.$store.commit("setDrawer", val);
-      }
+@Component
+export default class CommonDrawer extends Vue {
+  name: string = "CommonDrawer";
+  logo: string =
+    "https://raw.githubusercontent.com/paveg/pwa-portfolio/master/assets/image/icon_circle.png";
+  image: string =
+    "https://www.pakutaso.com/shared/img/thumb/edgawa-hanabi-27_TP_V4.jpg";
+  responsive: boolean = false;
+  linkItems: LinkInterface[] = [
+    {
+      icon: "mdi-home",
+      name: "Home",
+      to: "/"
     },
-    sidebarOverlayGradient() {
-      return `${this.$store.state.sidebarBackgroundColor}, ${this.$store.state.sidebarBackgroundColor}`;
+    {
+      icon: "mdi-account",
+      name: "About",
+      to: "/about"
+    },
+    {
+      icon: "mdi-note",
+      name: "Resume",
+      to: "/resume"
+    },
+    {
+      icon: "mdi-email",
+      name: "Contact",
+      to: "/contact"
+    },
+    {
+      icon: "mdi-security",
+      name: "Privacy Policy",
+      to: "/privacy_policy"
     }
-  },
+  ];
+  public get inputValue(): boolean {
+    return this.$store.state.drawer;
+  }
+  public set inputValue(val: boolean) {
+    this.$store.state.drawer = val;
+  }
+  public get sidebarOverlayGradient(): string {
+    return `${this.$store.state.sidebarBackgroundColor}, ${this.$store.state.sidebarBackgroundColor}`;
+  }
   mounted() {
     this.onResponsiveInverted();
     window.addEventListener("resize", this.onResponsiveInverted);
-  },
+  }
   beforeDestroy() {
     window.removeEventListener("resize", this.onResponsiveInverted);
-  },
-  methods: {
-    ...mapMutations(["setDrawer", "toggleDrawer"]),
-    onResponsiveInverted() {
-      this.responsive = window.innerWidth < 991;
-    }
   }
-});
+  onResponsiveInverted() {
+    this.responsive = window.innerWidth < 991;
+  }
+}
 </script>
 
 <style lang="scss">

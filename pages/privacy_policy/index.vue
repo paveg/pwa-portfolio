@@ -45,45 +45,34 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import { Component, Prop, Vue } from "vue-property-decorator";
 import HelperOffset from "@/components/helper/Offset.vue";
 
-export default Vue.extend({
+@Component({
   components: {
     HelperOffset
-  },
-  props: {
-    fullWidth: {
-      type: Boolean,
-      default: false
-    },
-    elevation: {
-      type: [Number, String],
-      default: 10
-    },
-    offset: {
-      type: [Number, String],
-      default: 24
-    },
-    inline: {
-      type: Boolean,
-      default: false
-    }
-  },
-  data: () => ({
-    title: "privacy policy",
-    name: "privacy policy"
-  }),
-  computed: {
-    styles() {
-      const top = Number(this.offset) * 2;
-      const bottom = this.offset;
-
-      return {
-        marginTop: `${top}px`,
-        marginBottom: `${bottom}px`
-      };
-    }
   }
-});
+})
+export default class PrivacyPolicy extends Vue {
+  @Prop({ type: Boolean, default: false })
+  fullWidth: boolean = false;
+  @Prop({ type: [Number, String], default: 10 })
+  elevation: number | string = 10;
+  @Prop({ type: [Number, String], default: 24 })
+  offset: number | string = 24;
+  @Prop({ type: Boolean, default: false })
+  inline: boolean = false;
+
+  title: string = "privacy policy";
+  name: string = "privacy policy";
+  public get styles(): object {
+    const top = Number(this.offset) * 2;
+    const bottom = this.offset;
+
+    return {
+      marginTop: `${top}px`,
+      marginBottom: `${bottom}px`
+    };
+  }
+}
 </script>

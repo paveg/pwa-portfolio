@@ -4,3 +4,9 @@ export interface RootState {
   sidebarOverlayGradient: string;
   sidebarBackgroundColor: string;
 }
+
+export interface LinkInterface {
+  name: string;
+  icon: string;
+  to: string;
+}

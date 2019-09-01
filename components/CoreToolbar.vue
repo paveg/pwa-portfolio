@@ -18,40 +18,36 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { mapMutations } from "vuex";
+import { Component, Watch, Vue } from "vue-property-decorator";
+// TODO: add mapMuttions
 
-export default Vue.extend({
-  name: "CoreToolbar",
-  data: () => ({
-    title: "home",
-    responsive: false,
-    responsiveInput: false
-  }),
-  computed: {},
-  watch: {
-    $route(val) {
-      this.title = val.name === "index" ? "home" : val.name;
-    }
-  },
+@Component
+export default class CoreToolbar extends Vue {
+  name: string = "CoreToolbar";
+  title: string = "home";
+  responsive: boolean = false;
+  responsiveInput: boolean = false;
+  @Watch("route")
+  route(val) {
+    this.title = val.name === "index" ? "home" : val.name;
+  }
+
   mounted() {
     this.onResponsiveInverted();
     window.addEventListener("resize", this.onResponsiveInverted);
-  },
+  }
   beforeDestroy() {
     window.removeEventListener("resize", this.onResponsiveInverted);
-  },
-  methods: {
-    ...mapMutations(["setDrawer", "toggleDrawer"]),
-    onClickBtn() {
-      this.$store.commit("toggleDrawer");
-    },
-    onResponsiveInverted() {
-      this.responsive = window.innerWidth < 1270;
-      this.responsiveInput = window.innerWidth > 991;
-    }
   }
-});
+
+  onClickBtn(): void {
+    this.$store.commit("toggleDrawer");
+  }
+  onResponsiveInverted(): void {
+    this.responsive = window.innerWidth < 1270;
+    this.responsiveInput = window.innerWidth > 991;
+  }
+}
 </script>
 
 <style lang="scss">
