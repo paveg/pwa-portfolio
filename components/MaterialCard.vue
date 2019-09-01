@@ -34,7 +34,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue } from "vue-property-decorator";
 import HelperOffset from "@/components/helper/Offset.vue";
 
 @Component({
@@ -49,8 +49,10 @@ export default class MaterialCard extends Vue {
   inline: boolean = false;
   fullWidth: boolean = false;
   offset: number | string = 24;
-  title: string | undefined = undefined;
-  text: string | undefined = undefined;
+  @Prop({ type: String, default: undefined })
+  title: string | undefined;
+  @Prop({ type: String, default: undefined })
+  text: string | undefined;
   public get hasOffset(): any {
     return this.$slots.header || this.$slots.offset || this.title || this.text;
   }
