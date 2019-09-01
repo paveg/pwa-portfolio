@@ -34,7 +34,7 @@
           <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
-          <v-list v-text="item.text" title />
+          <v-list v-text="item.name" title />
         </v-list-item>
         <v-divider light />
         <v-chip class="ma-4" color="info" style="width: 87%" label>
@@ -48,6 +48,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import { LinkInterface } from "~/types";
 // TODO: Add mapMutations
 
 @Component
@@ -58,34 +59,30 @@ export default class CommonDrawer extends Vue {
   image: string =
     "https://www.pakutaso.com/shared/img/thumb/edgawa-hanabi-27_TP_V4.jpg";
   responsive: boolean = false;
-  linkItems: {
-    icon: string;
-    text: string;
-    to: string;
-  }[] = [
+  linkItems: LinkInterface[] = [
     {
       icon: "mdi-home",
-      text: "Home",
+      name: "Home",
       to: "/"
     },
     {
       icon: "mdi-account",
-      text: "About",
+      name: "About",
       to: "/about"
     },
     {
       icon: "mdi-note",
-      text: "Resume",
+      name: "Resume",
       to: "/resume"
     },
     {
       icon: "mdi-email",
-      text: "Contact",
+      name: "Contact",
       to: "/contact"
     },
     {
       icon: "mdi-security",
-      text: "Privacy Policy",
+      name: "Privacy Policy",
       to: "/privacy_policy"
     }
   ];

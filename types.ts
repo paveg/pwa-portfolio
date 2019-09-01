@@ -8,5 +8,5 @@ export interface RootState {
 export interface LinkInterface {
   name: string;
   icon: string;
-  Link: string;
+  to: string;
 }
