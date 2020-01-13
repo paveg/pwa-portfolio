@@ -75,7 +75,7 @@
     "nodemon": "^1.19.2",
     "nuxt-sass-resources-loader": "^2.0.5",
     "prettier": "^1.18.2",
-    "sass-loader": "^7.3.1",
+    "sass-loader": "^8.0.2",
     "ts-jest": "^24.1.0",
     "ts-node": "^8.3.0",
     "typescript-eslint-parser": "^22.0.0",
